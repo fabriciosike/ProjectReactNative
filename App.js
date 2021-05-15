@@ -1,21 +1,56 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+//import liraries
+import React, { Component } from 'react';
+import { Text, View, Image, TextInput, TouchableOpacity , Alert} from 'react-native';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+import styles from './src/styles/ManipulandoStyles';
+
+// create a component
+class App extends Component {
+
+  pressed = () => {
+    Alert.alert("Digite os dados nos campos solicitados")
+
+  }
+
+
+  render() {
+    return (
+      <View style={styles.container}>
+
+        <Image
+          source={require('./src/image/instagram.png')}
+          style={styles.logo}
+        />
+
+        <TextInput
+          style={styles.input}
+          placeholder="Telefone, nome de usuário ou e-mail"
+        />
+
+
+        <TextInput
+          style={styles.input}
+          placeholder="Senha"
+          secureTextEntry={true}
+        />
+
+         <TouchableOpacity
+          style={styles.button} onPress={() => {this.pressed()}}>
+            <Text style={styles.buttonText}>Entrar</Text>
+
+         </TouchableOpacity>
+
+      </View>
+
+    );
+  };
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+//make this component available to the app
+export default App;
+
+
+
+
+
+
