@@ -3,13 +3,13 @@ import {StyleSheet} from 'react-native';
 const styles = StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: '#white' ,
+      backgroundColor: '#FFFFFF' ,
       justifyContent: 'center',
       alignItems: 'center',
   
     },
     texto1:{
-      color: '#f8f8ff',
+      color: '#000000',
       fontSize: 24,
       padding: 30
     },
@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
       padding: 30
     },
     texto3:{
-      color: '#f0ffff',
+      color: '#FFFF00',
       fontSize: 18,
       textAlign: 'center',
       letterSpacing: 2,
@@ -50,6 +50,12 @@ const styles = StyleSheet.create({
       height: 150,
       borderRadius: 10,
       resizeMode:"contain",
+    },
+
+    foto: {
+      width: 150,
+      height: 150,
+      borderRadius: 100,
     },
 
     input:{
